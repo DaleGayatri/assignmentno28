@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App</title>
+    <title>Assignment 28</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #2b87ae;
+            background-color: #9FB3DF;
         }
         .heading {
             text-align: center;
             color: #FFF1D5;
         }
         .add-task-container {
-            background-color: #9facba;
+            background-color: #9EC6F3;
             padding: 20px;
             position: fixed;
             bottom: 0;
@@ -122,7 +122,7 @@
 
             localStorage.setItem("tasks", JSON.stringify(tasks));
             renderToDoList(tasks);
-            inputTaskElement.value = ''; 
+            inputTaskElement.value = ''; // Clear input after adding
         }
 
         const savedTasks = localStorage.getItem("tasks");
@@ -142,7 +142,7 @@
                     <div class="task-card">
                         <h3 class="task-card-title">${taskObj.task}</h3>
                         <span class="task-card-priority">${taskObj.priority}</span>
-                        <img scr="bin.png" onclick="removeTask(${i})" class="delete" alt="Delete Task"/>
+                        <img src="bin.png" onclick="removeTask(${i})" class="delete" alt="Delete Task"/>
                     </div>
                 `;
             }
